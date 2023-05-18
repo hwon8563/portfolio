@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEEK 11 QUIZ</title>
+
+        <style>
+            .container {  display: grid;
+                grid-template-columns: 0.01fr 10fr;
+                grid-template-rows: 0.fr 1.5fr 10fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "grid-header grid-header grid-header grid-header"
+                    "grid-nav grid-text grid-svg grid-svg"
+                    "grid-nav grid-text grid-svg grid-svg"
+                    "grid-nav grid-text grid-controls grid-controls";
+            }
+
+            .grid-header { grid-area: grid-header; }
+
+            .grid-svg { grid-area: grid-svg; }
+
+            .grid-controls { grid-area: grid-controls; }
+
+            .centered-text { text-align: center; }
+
+            .full-size-svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .svg-container {
+                width: fit-content;
+                height: fit-content;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="grid-header">
+                <h1 class="centered-text">Constellations</h1>
+            </div>
+            <div class="grid-nav">
+                <a href="/index.html"></a>
+            </div>
+            <div class="grid-text">
+            </div>
+            <div class="grid-svg">
+                <div class="svg-container">
+                    <svg class="full-size-svg" id="base-svg" ></svg>
+                
+                </div>
+                </div>
+            </div>
+            <script src="utils.js"></script>
+            <script src="script.js"></script>
+    </body>
+</html>
